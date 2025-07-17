@@ -1,0 +1,44 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.staging
+*.key
+*.pem
+config.json
+secrets.json
+
+# Virtual environment
+.venv
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Generated projects (optional - uncomment if you don't want to track generated projects)
+# project/

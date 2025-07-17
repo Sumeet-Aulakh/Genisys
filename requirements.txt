@@ -1,0 +1,8 @@
+art==6.1
+progress==1.6
+openai>=1.0.0
+ollama>=0.3.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+PyGithub>=2.0.0
+InquirerPy>=0.3.4

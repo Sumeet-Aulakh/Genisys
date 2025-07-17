@@ -49,8 +49,10 @@ def doGitStuff(title, repoName, description) -> None:
     createRepo(title, repoName, description)
 
     subprocess.run(["git", "init"], cwd=project_dir)
-    subprocess.run(["git", "config", "user.name", "Sumeet-Aulakh"], cwd=project_dir)
-    subprocess.run(["git", "config", "user.email", "sumeet@sumeetaulakh.com"], cwd=project_dir)
+    git_user_name = dotenv_values().get("GIT_USER_NAME") or "Genisys User"
+    git_user_email = dotenv_values().get("GIT_USER_EMAIL") or "user@example.com"
+    subprocess.run(["git", "config", "user.name", git_user_name], cwd=project_dir)
+    subprocess.run(["git", "config", "user.email", git_user_email], cwd=project_dir)
     subprocess.run(["git", "checkout", "-b", "main"], cwd=project_dir)
     subprocess.run(["git", "remote", "add", "origin", remote_url], cwd=project_dir)
 
@@ -59,5 +61,6 @@ def doGitStuff(title, repoName, description) -> None:
     subprocess.run(["git", "commit", "-m", "Auto commit via script"], cwd=project_dir)
     subprocess.run(["git", "push", "-u", "origin", "main", "--force"], cwd=project_dir)
 
-    print("Repos after creation")
+    print("Created repo: ", repoName)
+    print('Go to https://github.com/{username}/{repoName} to view your new repository.')
     # getRepos()

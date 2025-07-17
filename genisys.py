@@ -60,7 +60,7 @@ def main():
             "Yes",
             "No"
         ],
-        default="Yes"
+        default="No"
     ).execute()
 
     if askToRunScript == "Yes":
